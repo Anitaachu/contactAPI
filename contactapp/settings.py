@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 import os
-
+import django_heroku
 from pathlib import Path
 
 import dj_database_url
@@ -29,8 +29,8 @@ SECRET_KEY = 'django-insecure-d&dg(0d5a-lf%0xt=@@^$izl@2_@qm9ag)(n9l@v^l!fbxe&+b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'contactapp.herokuapp.com']
-
+# ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'contactapp.herokuapp.com']
+ALLOWED_HOSTS = ['mycontactapp-api.herokuapp.com']
 
 
 # Application definition
@@ -85,11 +85,11 @@ WSGI_APPLICATION = 'contactapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'contactapp',
-        'USER': 'contactuser',
-        'PASSWORD': 'Anita63',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'd8mbc8plirtvss',
+        'USER': 'uwhmambilkhlpq',
+        'PASSWORD': '60e68f9aed93c0cdb1dc433cca733ad6c249f8dacd7294d8fd7a060d3b4ea2fb',
+        'HOST': 'ec2-44-193-111-218.compute-1.amazonaws.com',
+        'PORT': '5432',    
     }
 }
 
@@ -135,10 +135,11 @@ USE_TZ = True
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
 
-STATIC_URL = '/static/'
+# STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
-
+STATIC_URL = '/static/'
+django_heroku.settings(locals())
 STATICFILES_DIRS = [os.path.join(BASE_DIR,'contactapp/static')
 ]
 
