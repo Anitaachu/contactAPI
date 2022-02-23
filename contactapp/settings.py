@@ -85,9 +85,9 @@ WSGI_APPLICATION = 'contactapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd8mbc8plirtvss',
-        'USER': 'uwhmambilkhlpq',
-        'PASSWORD': '60e68f9aed93c0cdb1dc433cca733ad6c249f8dacd7294d8fd7a060d3b4ea2fb',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
         'HOST': 'ec2-44-193-111-218.compute-1.amazonaws.com',
         'PORT': '5432',    
     }
